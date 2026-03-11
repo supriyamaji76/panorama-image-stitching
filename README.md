@@ -25,25 +25,7 @@ This project demonstrates core **computer vision algorithms** used in real-world
 
 The following pipeline is implemented in this project:
 
-Input Images
-↓
-Feature Detection
-↓
-Feature Matching
-↓
-Homography Estimation
-↓
-Bundle Adjustment
-↓
-Image Warping
-↓
-Exposure Compensation
-↓
-Seam Finding
-↓
-Multi-band Blending
-↓
-Final Panorama
+Input Images -> Feature Detection (ORB / SIFT) -> Feature Matching -> Homography Estimation -> Bundle Adjustment -> Image Warping -> Exposure -> Compensation -> Seam Finding -> Multi-band Blending -> Final Panorama
 
 This pipeline is similar to the architecture used in **OpenCV’s internal Stitcher implementation**.
 
@@ -59,19 +41,20 @@ This pipeline is similar to the architecture used in **OpenCV’s internal Stitc
 
 ## Install Dependencies (Mac)
 
-Install OpenCV using Homebrew:
+Install OpenCV using Homebrew: ```brew install opencv```
 
 ---
 
 ## Build the Project
 
+```bash
 mkdir build
 cd build
 cmake ..
 make
-
+```
 ---
 
 ## Run the Panorama Stitcher
 
-./panorama ../images/a1.png ../images/a2.png ../images/a3.png
+```./panorama ../images/a1.png ../images/a2.png ../images/a3.png```
